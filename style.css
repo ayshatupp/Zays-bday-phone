@@ -1,0 +1,247 @@
+body{
+    Display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #efbbcc
+}
+h1{margin-bottom:20px;
+
+}
+
+.phone {width: 300px;
+    height: 600px;
+    background-color: #000;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #ff9ecb, 0 0 40px #c084fc;
+    position: relative;
+}
+.screen {
+    width: 270px;
+    height: 520px;
+    background-color: #111;
+    border-radius: 25px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    overflow: hidden;
+}
+
+.apps{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+    gap: 15px;
+   justify-items: center;
+height: 90%
+
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+    background-color: #efbbcc;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    box-shadow:  0 5px 10px #c084fc;
+    transition: 0.3s;
+
+}
+.app p{
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.status-bar {
+   position: absolute;
+    top: 12px;
+    left: 20px;
+    right: 20px;
+    display:flex;
+    justify-content: space-between;
+    color:white;
+}
+
+
+.notch {
+    width: 90px;
+    height: 25px;
+    background-color: #000000;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.home{
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    background-color: #efbbcc;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.icon:hover {
+    background-color: #c084fc;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px #c084fc;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+   .icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    background-color: #efbbcc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    box-shadow: 0 5px 10px #c084fc;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.notes-page{
+    display: none;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding :20px;
+    z-index: 5;
+}
+
+.photos-page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index:5;
+}
+#photo {
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.spotify-page {
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    box-sizing:border-box;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    z-index:10;
+}
+audio {
+    width: 200px;
+    max-width: 100%;
+}
+
+.spotify-page {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.album-cover {
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.spotify-page h3 {
+    margin-bottom: 5px;
+}
+
+.lyrics {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 0.8;
+    height: 100px;
+    overflow: hidden;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.secret-page{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    overflow-y:auto;
+    z-index:10;
+}
+
+.secret-photo{
+    width:200px;
+    border-radius:20px;
+    margin:15px 0;
+    box-shadow:0 0 15px rgba(255,255,255,0.2);
+}
+
+.secret-text{
+    font-size:14px;
+    line-height:1.6;
+}

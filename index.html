@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Birthday Phone </title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+
+
+ <body>
+
+
+ <h1>Zaynahs Bday phone 💕 </h1>
+    
+<div class="phone"> 
+    
+  <div class="screen">
+
+    <div class="spotify-page">
+
+    <h2>🎶 Zaynah's Song</h2>
+
+    <img class="album-cover" src="album cover.jpg" alt="Album Cover">
+
+    <h3>Back to the basics</h3>
+
+    <p>A song that reminds me of you 💕</p>
+
+    <audio id="song">
+        <source src="Zees-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="playSong()">▶️ Play</button>
+    <button onclick="goBack()">← Back</button>
+
+    <div class="lyrics">
+        <p>Everybody says that youre no good for me 😒.</p>
+        <p> forgot the rest.</p>
+        <p>💗</p>
+    </div>
+
+   
+
+</div>
+    <div class="photos-page">
+    <h2> THE birthday girl 😲</h2>
+
+    <img id="photo" src="image 1.jpeg" alt="Photo 1">
+    <button onclick="nextPhoto()">➡️</button>
+
+    <button onclick="goBack()">← Back</button>
+</div>
+    <div class="notes-page">
+        <h2>Happy bornday Zaynah! 🎉</h2>
+        <p> Sweetest 18th to
+            the sweetest person in my life 
+            you are the most amazing person 
+            I have ever met and I am so grateful 
+            to have you in my life. 
+            Thank you for always having my back 
+            and being there for me. 
+            I love you so much and 
+            I hope you have the best birthday ever! 💖 </p>
+            <button onclick="goBack()">← Back</button>
+    </div>
+    <div class="secret-page">
+    <h2>❤️ One Last Thing...</h2>
+
+    <img src="collage.jpeg" class="secret-photo" alt="Us">
+
+    <p class="secret-text">
+        If you've made it this far... thank you for taking the time to explore
+        this little phone. 💗<br><br>
+
+        I made every part of it just for you because you're one of the most
+        important people in my life. I hope this made you smile, even if just
+        for a little while.<br><br>
+
+        Happy 18th Birthday, Zaynah. I hope this year brings you all the
+        happiness, success, and memories you deserve. You'll always have
+        someone cheering you on. 🤍
+    </p>
+
+    <button onclick="goBack()">← Back</button>
+</div>
+
+    <div class="notch"></div>
+
+    <div class="status-bar">
+        <span id="time">1:05AM</span>
+        <span>🔋</span>
+    </div>
+    <div class="home"> </div>
+
+
+<div class="apps">
+
+
+<div class="app">
+    <div class="icon" onclick="openNotes()">
+        📝
+    </div>
+    <p>Notes</p>
+</div>
+
+
+<div class="app">
+    <div class="icon" onclick="openPhotos()">📸</div>
+    <p>Photos</p>
+ </div>
+
+ <div class="app">
+    <div class="icon" onclick="openSpotify()">🎶</div>
+    <p>Spotify</p>
+ </div>
+
+
+ <div class="app">
+    <div class="icon" onclick="openSecret()">❤️</div>
+    <p>Secret❤</p>
+    </div>
+
+</div>
+
+<script>
+
+function openNotes() {
+    document.querySelector(".apps").style.display = "none";
+    document.querySelector(".notes-page").style.display = "block";
+}
+
+function goBack() {
+    document.querySelector(".apps").style.display = "grid";
+    document.querySelector(".notes-page").style.display = "none";
+    document.querySelector(".photos-page").style.display = "none";
+    document.querySelector(".spotify-page").style.display = "none";
+    document.querySelector(".secret-page").style.display = "none";
+}
+
+function openPhotos(){
+    document.querySelector(".apps").style.display = "none";
+    document.querySelector(".photos-page").style.display = "block";
+}
+    
+
+function updateTime(){
+    let now = new Date();
+    document.getElementById("time").innerHTML =
+    now.getHours() + ":" + String(now.getMinutes()).padStart(2,"0");
+}
+
+setInterval(updateTime,1000);
+updateTime();
+let photos = [
+"image 1.jpeg",
+"image 2.jpeg",
+"image 3.jpeg",
+"image 4.jpeg",
+"image 5.jpeg",
+"image 6.jpeg",
+"image 7.jpeg"
+];
+
+let current = 0;
+
+function nextPhoto(){
+    current++;
+
+    if(current >= photos.length){
+        current = 0;
+    }
+
+    document.getElementById("photo").src = photos[current];
+}
+
+function openSpotify(){
+    document.querySelector(".apps").style.display="none";
+    document.querySelector(".spotify-page").style.display="block";
+}
+function playSong() {
+    let song = document.getElementById("song");
+    song.play();
+}
+
+function openSecret(){
+    document.querySelector(".apps").style.display = "none";
+    document.querySelector(".secret-page").style.display = "block";
+}
+
+
+</script>
+
+ </body>
+</html>
